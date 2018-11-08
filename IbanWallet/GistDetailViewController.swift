@@ -11,12 +11,15 @@ import UIKit
 class GistDetailViewController: UIViewController {
     
     private lazy var gistListView: GistDetailView = {
-        let view = GistDetailView()
+        let view = GistDetailView(gist: self.gistDetails)
         view.backgroundColor = .clear
         return view
     }()
+    
+    private var gistDetails: Gist
         
-    init() {
+    init(gist: Gist) {
+        self.gistDetails = gist
         super.init(nibName: nil, bundle: nil)
     }
     

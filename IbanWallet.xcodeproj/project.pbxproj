@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF6C557821944A5F0035D6A7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557721944A5F0035D6A7 /* Theme.swift */; };
+		CF6C557A21944A730035D6A7 /* Theme+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557921944A730035D6A7 /* Theme+Splash.swift */; };
+		CF6C557C21944A820035D6A7 /* Theme+GistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557B21944A820035D6A7 /* Theme+GistList.swift */; };
+		CF6C557F21944AB10035D6A7 /* Theme+GistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557E21944AB10035D6A7 /* Theme+GistDetail.swift */; };
+		CF6C558121944B3D0035D6A7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C558021944B3D0035D6A7 /* Strings.swift */; };
 		CF6DBBC321943C0300CBA8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBC221943C0300CBA8B6 /* AppDelegate.swift */; };
 		CF6DBBCA21943C0600CBA8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6DBBC921943C0600CBA8B6 /* Assets.xcassets */; };
 		CF6DBBCD21943C0600CBA8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6DBBCB21943C0600CBA8B6 /* LaunchScreen.storyboard */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF6C557721944A5F0035D6A7 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CF6C557921944A730035D6A7 /* Theme+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Splash.swift"; sourceTree = "<group>"; };
+		CF6C557B21944A820035D6A7 /* Theme+GistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+GistList.swift"; sourceTree = "<group>"; };
+		CF6C557E21944AB10035D6A7 /* Theme+GistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+GistDetail.swift"; sourceTree = "<group>"; };
+		CF6C558021944B3D0035D6A7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CF6DBBBF21943C0300CBA8B6 /* IbanWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbanWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6DBBC221943C0300CBA8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6DBBC921943C0600CBA8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF6C557D21944A980035D6A7 /* GistDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CF6C557E21944AB10035D6A7 /* Theme+GistDetail.swift */,
+				CF6DBBD621943CA400CBA8B6 /* GistDetailViewController.swift */,
+				CF6DBBD821943CBC00CBA8B6 /* GistDetailView.swift */,
+			);
+			name = GistDetail;
+			sourceTree = "<group>";
+		};
 		CF6DBBB621943C0300CBA8B6 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +122,7 @@
 			children = (
 				CF6DBBEB2194404300CBA8B6 /* Splash */,
 				CF6DBBEC2194405300CBA8B6 /* GistList */,
+				CF6C557D21944A980035D6A7 /* GistDetail */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -109,6 +130,7 @@
 		CF6DBBEB2194404300CBA8B6 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				CF6C557921944A730035D6A7 /* Theme+Splash.swift */,
 				CF6DBBDE21943D5900CBA8B6 /* GistSplashViewController.swift */,
 				CF6DBBE021943D6700CBA8B6 /* GistSplashView.swift */,
 			);
@@ -118,11 +140,10 @@
 		CF6DBBEC2194405300CBA8B6 /* GistList */ = {
 			isa = PBXGroup;
 			children = (
+				CF6C557B21944A820035D6A7 /* Theme+GistList.swift */,
 				CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */,
 				CF6DBBEF219446F800CBA8B6 /* GistListView.swift */,
 				CF6DBBDC21943D0500CBA8B6 /* GistListTableViewCell.swift */,
-				CF6DBBD621943CA400CBA8B6 /* GistDetailViewController.swift */,
-				CF6DBBD821943CBC00CBA8B6 /* GistDetailView.swift */,
 			);
 			name = GistList;
 			sourceTree = "<group>";
@@ -130,6 +151,8 @@
 		CF6DBBF12194474300CBA8B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CF6C557721944A5F0035D6A7 /* Theme.swift */,
+				CF6C558021944B3D0035D6A7 /* Strings.swift */,
 				CF6DBBE92194402100CBA8B6 /* Managers */,
 				CF6DBBE82194400B00CBA8B6 /* Model */,
 			);
@@ -206,17 +229,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6C557C21944A820035D6A7 /* Theme+GistList.swift in Sources */,
 				CF6DBBE721943FFD00CBA8B6 /* Gist.swift in Sources */,
+				CF6C558121944B3D0035D6A7 /* Strings.swift in Sources */,
 				CF6DBBDF21943D5900CBA8B6 /* GistSplashViewController.swift in Sources */,
 				CF6DBBDD21943D0500CBA8B6 /* GistListTableViewCell.swift in Sources */,
 				CF6DBBD921943CBC00CBA8B6 /* GistDetailView.swift in Sources */,
 				CF6DBBEE2194414D00CBA8B6 /* GistListViewController.swift in Sources */,
+				CF6C557A21944A730035D6A7 /* Theme+Splash.swift in Sources */,
 				CF6DBBD721943CA400CBA8B6 /* GistDetailViewController.swift in Sources */,
 				CF6DBBE321943D8600CBA8B6 /* NetworkManager.swift in Sources */,
 				CF6DBBE521943D9E00CBA8B6 /* PersistanceStorageManager.swift in Sources */,
 				CF6DBBC321943C0300CBA8B6 /* AppDelegate.swift in Sources */,
+				CF6C557821944A5F0035D6A7 /* Theme.swift in Sources */,
 				CF6DBBE121943D6700CBA8B6 /* GistSplashView.swift in Sources */,
 				CF6DBBF0219446F800CBA8B6 /* GistListView.swift in Sources */,
+				CF6C557F21944AB10035D6A7 /* Theme+GistDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

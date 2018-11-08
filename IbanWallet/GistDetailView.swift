@@ -12,14 +12,9 @@ class GistDetailView: UIView {
     
     private var iconImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
-        imageView.layer.cornerRadius = 27
+        imageView.layer.cornerRadius = Theme.Default.GistDetail.iconImageViewHeight / 2
         imageView.layer.masksToBounds = true
         return imageView
-    }()
-    
-    private var gistTitleLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        return label
     }()
     
     private var gistTitleDescription: UITextView = {
@@ -32,10 +27,20 @@ class GistDetailView: UIView {
         return view
     }()
     
+    private var gistToDisplay: Gist?
+    
+    init(gist: Gist) {
+        self.gistToDisplay = gist
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setupView() {
         addSubview(stackView)
         stackView.addArrangedSubview(iconImageView)
-        stackView.addArrangedSubview(gistTitleLabel)
         stackView.addArrangedSubview(gistTitleDescription)
     }
     

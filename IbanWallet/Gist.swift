@@ -10,8 +10,12 @@ import Foundation
 
 class Gist {
     
-    init() {
-        
+    let gistDescription: String
+    let imageUrlString: String
+    
+    init(description: String, urlString: String) {
+        self.gistDescription = description
+        self.imageUrlString = urlString
     }
     
 }

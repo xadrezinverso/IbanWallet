@@ -45,6 +45,9 @@ class GistListViewController: UIViewController {
     
     private func setupTableViewCellsInfo() {
         
+        let gist = Gist(description: "HELLOO", urlString: "www.google.pt")
+        
+        tableViewRows = [gist, gist, gist]
     }
 }
 
@@ -60,4 +63,12 @@ extension GistListViewController: UITableViewDataSource {
 
 extension GistListViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedGist = tableViewRows?[indexPath.row] else {
+            return
+        }
+        
+        let detailController = GistDetailViewController(gist: selectedGist)
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
 }
