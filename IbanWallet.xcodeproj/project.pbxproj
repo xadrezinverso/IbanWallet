@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		CF6DBBC321943C0300CBA8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBC221943C0300CBA8B6 /* AppDelegate.swift */; };
-		CF6DBBC521943C0300CBA8B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBC421943C0300CBA8B6 /* ViewController.swift */; };
-		CF6DBBC821943C0300CBA8B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6DBBC621943C0300CBA8B6 /* Main.storyboard */; };
 		CF6DBBCA21943C0600CBA8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6DBBC921943C0600CBA8B6 /* Assets.xcassets */; };
 		CF6DBBCD21943C0600CBA8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6DBBCB21943C0600CBA8B6 /* LaunchScreen.storyboard */; };
+		CF6DBBD721943CA400CBA8B6 /* GistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBD621943CA400CBA8B6 /* GistDetailViewController.swift */; };
+		CF6DBBD921943CBC00CBA8B6 /* GistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBD821943CBC00CBA8B6 /* GistDetailView.swift */; };
+		CF6DBBDD21943D0500CBA8B6 /* GistListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBDC21943D0500CBA8B6 /* GistListTableViewCell.swift */; };
+		CF6DBBDF21943D5900CBA8B6 /* GistSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBDE21943D5900CBA8B6 /* GistSplashViewController.swift */; };
+		CF6DBBE121943D6700CBA8B6 /* GistSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE021943D6700CBA8B6 /* GistSplashView.swift */; };
+		CF6DBBE321943D8600CBA8B6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE221943D8600CBA8B6 /* NetworkManager.swift */; };
+		CF6DBBE521943D9E00CBA8B6 /* PersistanceStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE421943D9E00CBA8B6 /* PersistanceStorageManager.swift */; };
+		CF6DBBE721943FFD00CBA8B6 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE621943FFD00CBA8B6 /* Gist.swift */; };
+		CF6DBBEE2194414D00CBA8B6 /* GistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF6DBBBF21943C0300CBA8B6 /* IbanWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbanWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6DBBC221943C0300CBA8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF6DBBC421943C0300CBA8B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF6DBBC721943C0300CBA8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF6DBBC921943C0600CBA8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF6DBBCC21943C0600CBA8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6DBBCE21943C0600CBA8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF6DBBD621943CA400CBA8B6 /* GistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailViewController.swift; sourceTree = "<group>"; };
+		CF6DBBD821943CBC00CBA8B6 /* GistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailView.swift; sourceTree = "<group>"; };
+		CF6DBBDC21943D0500CBA8B6 /* GistListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListTableViewCell.swift; sourceTree = "<group>"; };
+		CF6DBBDE21943D5900CBA8B6 /* GistSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistSplashViewController.swift; sourceTree = "<group>"; };
+		CF6DBBE021943D6700CBA8B6 /* GistSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistSplashView.swift; sourceTree = "<group>"; };
+		CF6DBBE221943D8600CBA8B6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CF6DBBE421943D9E00CBA8B6 /* PersistanceStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceStorageManager.swift; sourceTree = "<group>"; };
+		CF6DBBE621943FFD00CBA8B6 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,60 @@
 			isa = PBXGroup;
 			children = (
 				CF6DBBC221943C0300CBA8B6 /* AppDelegate.swift */,
-				CF6DBBC421943C0300CBA8B6 /* ViewController.swift */,
-				CF6DBBC621943C0300CBA8B6 /* Main.storyboard */,
+				CF6DBBEA2194403C00CBA8B6 /* Modules */,
+				CF6DBBE82194400B00CBA8B6 /* Model */,
+				CF6DBBE92194402100CBA8B6 /* Managers */,
 				CF6DBBC921943C0600CBA8B6 /* Assets.xcassets */,
 				CF6DBBCB21943C0600CBA8B6 /* LaunchScreen.storyboard */,
 				CF6DBBCE21943C0600CBA8B6 /* Info.plist */,
 			);
 			path = IbanWallet;
+			sourceTree = "<group>";
+		};
+		CF6DBBE82194400B00CBA8B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF6DBBE621943FFD00CBA8B6 /* Gist.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CF6DBBE92194402100CBA8B6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CF6DBBE221943D8600CBA8B6 /* NetworkManager.swift */,
+				CF6DBBE421943D9E00CBA8B6 /* PersistanceStorageManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		CF6DBBEA2194403C00CBA8B6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CF6DBBEB2194404300CBA8B6 /* Splash */,
+				CF6DBBEC2194405300CBA8B6 /* New Group */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		CF6DBBEB2194404300CBA8B6 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CF6DBBDE21943D5900CBA8B6 /* GistSplashViewController.swift */,
+				CF6DBBE021943D6700CBA8B6 /* GistSplashView.swift */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		CF6DBBEC2194405300CBA8B6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */,
+				CF6DBBDC21943D0500CBA8B6 /* GistListTableViewCell.swift */,
+				CF6DBBD621943CA400CBA8B6 /* GistDetailViewController.swift */,
+				CF6DBBD821943CBC00CBA8B6 /* GistDetailView.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +185,6 @@
 			files = (
 				CF6DBBCD21943C0600CBA8B6 /* LaunchScreen.storyboard in Resources */,
 				CF6DBBCA21943C0600CBA8B6 /* Assets.xcassets in Resources */,
-				CF6DBBC821943C0300CBA8B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +195,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF6DBBC521943C0300CBA8B6 /* ViewController.swift in Sources */,
+				CF6DBBE721943FFD00CBA8B6 /* Gist.swift in Sources */,
+				CF6DBBDF21943D5900CBA8B6 /* GistSplashViewController.swift in Sources */,
+				CF6DBBDD21943D0500CBA8B6 /* GistListTableViewCell.swift in Sources */,
+				CF6DBBD921943CBC00CBA8B6 /* GistDetailView.swift in Sources */,
+				CF6DBBEE2194414D00CBA8B6 /* GistListViewController.swift in Sources */,
+				CF6DBBD721943CA400CBA8B6 /* GistDetailViewController.swift in Sources */,
+				CF6DBBE321943D8600CBA8B6 /* NetworkManager.swift in Sources */,
+				CF6DBBE521943D9E00CBA8B6 /* PersistanceStorageManager.swift in Sources */,
 				CF6DBBC321943C0300CBA8B6 /* AppDelegate.swift in Sources */,
+				CF6DBBE121943D6700CBA8B6 /* GistSplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF6DBBC621943C0300CBA8B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF6DBBC721943C0300CBA8B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF6DBBCB21943C0600CBA8B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

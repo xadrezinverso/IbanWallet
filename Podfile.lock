@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.7.2)
+  - Cartography (3.0.0)
+  - Realm (3.11.0):
+    - Realm/Headers (= 3.11.0)
+  - Realm/Headers (3.11.0)
+  - RealmSwift (3.11.0):
+    - Realm (= 3.11.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.7.2)
+  - Cartography (= 3.0)
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Cartography
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Cartography: 105643267226a7ab58895b94b44727eb013e31ce
+  Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
+  RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
+
+PODFILE CHECKSUM: 6088013a29536ecd7eb408481e08fcc70cc9275d
+
+COCOAPODS: 1.5.3
