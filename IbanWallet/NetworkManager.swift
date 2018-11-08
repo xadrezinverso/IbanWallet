@@ -10,7 +10,7 @@ import Foundation
 
 enum NetworkManagerResponseResult {
     case success
-    case queued
+    case failed
 }
 
 struct NetworkManagerResponse {
@@ -28,7 +28,16 @@ class NetworkManager {
         localPersistenceManager = persistenceManager
     }
     
-    func getGists() -> NetworkManagerResponse {
-        return
-    }
+    //    func getGists() -> NetworkManagerResponse {
+    //        return
+    //    }
+    
+    //    func favouriteGist() -> NetworkManagerResponse {
+    //        return
+    //    }
+    
+    //    func getGist() -> NetworkManagerResponse {
+    //        return
+    //    }
+
 }

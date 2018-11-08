@@ -6,4 +6,21 @@
 //  Copyright © 2018 SBT. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class GistListTableViewCell: UITableViewCell {
+    
+    public func configure(info: Any) {
+        setupView(info: info)
+        setupLayout()
+    }
+    
+    public func setupView(info: Any) {
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+    }
+    
+    public func setupLayout() {
+        
+    }
+}

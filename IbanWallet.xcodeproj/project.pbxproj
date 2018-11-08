@@ -19,6 +19,7 @@
 		CF6DBBE521943D9E00CBA8B6 /* PersistanceStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE421943D9E00CBA8B6 /* PersistanceStorageManager.swift */; };
 		CF6DBBE721943FFD00CBA8B6 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE621943FFD00CBA8B6 /* Gist.swift */; };
 		CF6DBBEE2194414D00CBA8B6 /* GistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */; };
+		CF6DBBF0219446F800CBA8B6 /* GistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBEF219446F800CBA8B6 /* GistListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CF6DBBE421943D9E00CBA8B6 /* PersistanceStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceStorageManager.swift; sourceTree = "<group>"; };
 		CF6DBBE621943FFD00CBA8B6 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
+		CF6DBBEF219446F800CBA8B6 /* GistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				CF6DBBC221943C0300CBA8B6 /* AppDelegate.swift */,
+				CF6DBBF12194474300CBA8B6 /* Core */,
 				CF6DBBEA2194403C00CBA8B6 /* Modules */,
-				CF6DBBE82194400B00CBA8B6 /* Model */,
-				CF6DBBE92194402100CBA8B6 /* Managers */,
 				CF6DBBC921943C0600CBA8B6 /* Assets.xcassets */,
 				CF6DBBCB21943C0600CBA8B6 /* LaunchScreen.storyboard */,
 				CF6DBBCE21943C0600CBA8B6 /* Info.plist */,
@@ -100,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6DBBEB2194404300CBA8B6 /* Splash */,
-				CF6DBBEC2194405300CBA8B6 /* New Group */,
+				CF6DBBEC2194405300CBA8B6 /* GistList */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -114,15 +115,25 @@
 			name = Splash;
 			sourceTree = "<group>";
 		};
-		CF6DBBEC2194405300CBA8B6 /* New Group */ = {
+		CF6DBBEC2194405300CBA8B6 /* GistList */ = {
 			isa = PBXGroup;
 			children = (
 				CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */,
+				CF6DBBEF219446F800CBA8B6 /* GistListView.swift */,
 				CF6DBBDC21943D0500CBA8B6 /* GistListTableViewCell.swift */,
 				CF6DBBD621943CA400CBA8B6 /* GistDetailViewController.swift */,
 				CF6DBBD821943CBC00CBA8B6 /* GistDetailView.swift */,
 			);
-			name = "New Group";
+			name = GistList;
+			sourceTree = "<group>";
+		};
+		CF6DBBF12194474300CBA8B6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CF6DBBE92194402100CBA8B6 /* Managers */,
+				CF6DBBE82194400B00CBA8B6 /* Model */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				CF6DBBE521943D9E00CBA8B6 /* PersistanceStorageManager.swift in Sources */,
 				CF6DBBC321943C0300CBA8B6 /* AppDelegate.swift in Sources */,
 				CF6DBBE121943D6700CBA8B6 /* GistSplashView.swift in Sources */,
+				CF6DBBF0219446F800CBA8B6 /* GistListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
