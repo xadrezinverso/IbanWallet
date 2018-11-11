@@ -30,7 +30,7 @@ class PersistanceStorageManager {
                     guard let gist = Mapper<Gist>().map(JSON: item as! [String : Any]) else {
                         continue
                     }
-                    database.add(gist, update: true)
+                    database.add(gist)
                     print("Gist added to realm: \(gist.id)")
                 }
             }

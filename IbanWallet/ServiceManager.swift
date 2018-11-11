@@ -34,7 +34,7 @@ class ServiceManager {
         networkManager?.downloadGists()
     }
     
-    public func listenToGistAdditions() -> Results<Gist>? {
+    public func gistsFromLocal() -> Results<Gist>? {
         return localPersistenceManager?.fetchGistResults()
     }
 }

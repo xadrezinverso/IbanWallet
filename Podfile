@@ -6,8 +6,9 @@ target 'IbanWallet' do
   use_frameworks!
 
   # Pods for IbanWallet
-  pod 'Alamofire', '4.7.2'
-  pod 'RealmSwift', '3.11.0'
-  pod 'Cartography', '3.0'
+  pod 'Alamofire'
+  pod 'RealmSwift'
+  pod 'Cartography'
+  pod 'ObjectMapper'
 
 end

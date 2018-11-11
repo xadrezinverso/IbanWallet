@@ -59,7 +59,7 @@ class GistListViewController: UIViewController {
     }
     
     private func registerListener() {
-        notificationToken = serviceManager.listenToGistAdditions()?.observe { (changes: RealmCollectionChange) in
+        notificationToken = serviceManager.gistsFromLocal()?.observe { (changes: RealmCollectionChange) in
             switch changes {
             case .initial, .update:
                 // Results are now populated and can be accessed without blocking the UI
@@ -71,10 +71,10 @@ class GistListViewController: UIViewController {
     }
     
     private func populateTableView() {
-        guard let array = serviceManager.listenToGistAdditions() else {
+        guard let gists = serviceManager.gistsFromLocal() else {
             return
         }
-        tableViewGists = Array(array)
+        tableViewGists = Array(gists)
     }
 }
 
