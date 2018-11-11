@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
+import Cartography
 
 class GistListViewController: UIViewController {
+    
+    private var notificationToken: NotificationToken? = nil
     
     private lazy var gistListView: GistListView = {
         let view = GistListView(tableViewDelegate: self, tableViewDataSource: self)
@@ -16,9 +20,16 @@ class GistListViewController: UIViewController {
         return view
     }()
     
-    public var tableViewRows: [Gist]?
+    public var tableViewGists: [Gist]? {
+        didSet {
+            gistListView.reloadTableViewData()
+        }
+    }
     
-    init() {
+    private var serviceManager: ServiceManager
+    
+    init(sharedServiceManager: ServiceManager) {
+        serviceManager = sharedServiceManager
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,45 +37,69 @@ class GistListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override public func loadView() {
+        super.loadView()
         setupView()
         setupLayout()
     }
     
     private func setupView() {
         view.addSubview(gistListView)
-//        view.backgroundColor = Theme.Default.More.About.backgroundColor
-//        title = Strings.More.About.navBarTitle
-        setupTableViewCellsInfo()
+        view.backgroundColor = .yellow
+        registerListener()
     }
     
     private func setupLayout() {
-        
+        constrain(gistListView) { view in
+            guard let superview = view.superview else {
+                return
+            }
+            view.edges == superview.edges
+        }
     }
     
-    private func setupTableViewCellsInfo() {
-        
-        let gist = Gist(description: "HELLOO", urlString: "www.google.pt")
-        
-        tableViewRows = [gist, gist, gist]
+    private func registerListener() {
+        notificationToken = serviceManager.listenToGistAdditions()?.observe { (changes: RealmCollectionChange) in
+            switch changes {
+            case .initial, .update:
+                // Results are now populated and can be accessed without blocking the UI
+                self.populateTableView()
+            case .error(let error):
+                print("Error opening the Realm file on the background worker thread \(error)")
+            }
+        }
+    }
+    
+    private func populateTableView() {
+        guard let array = serviceManager.listenToGistAdditions() else {
+            return
+        }
+        tableViewGists = Array(array)
     }
 }
 
 extension GistListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewRows?.count ?? 0
+        return tableViewGists?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return GistListTableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GistListView.gistCellIdentifier, for:indexPath) as? GistListTableViewCell else {
+            return GistListTableViewCell()
+        }
+        
+        guard let gists = tableViewGists else {
+            return GistListTableViewCell()
+        }
+        cell.configure(info: gists[indexPath.row])
+        return cell
     }
 }
 
 extension GistListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let selectedGist = tableViewRows?[indexPath.row] else {
+        guard let selectedGist = tableViewGists?[indexPath.row] else {
             return
         }
         

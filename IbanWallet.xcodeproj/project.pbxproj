@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942D874EF94393D7843A9CE2 /* Pods_IbanWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C491CE0AF88ABBAA2B2C1F /* Pods_IbanWallet.framework */; };
 		CF6C557821944A5F0035D6A7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557721944A5F0035D6A7 /* Theme.swift */; };
 		CF6C557A21944A730035D6A7 /* Theme+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557921944A730035D6A7 /* Theme+Splash.swift */; };
 		CF6C557C21944A820035D6A7 /* Theme+GistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C557B21944A820035D6A7 /* Theme+GistList.swift */; };
@@ -25,9 +26,15 @@
 		CF6DBBE721943FFD00CBA8B6 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBE621943FFD00CBA8B6 /* Gist.swift */; };
 		CF6DBBEE2194414D00CBA8B6 /* GistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */; };
 		CF6DBBF0219446F800CBA8B6 /* GistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6DBBEF219446F800CBA8B6 /* GistListView.swift */; };
+		CFAB66E82198966600B7C3DA /* GistOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB66E72198966600B7C3DA /* GistOwner.swift */; };
+		CFAB66EA21989A5500B7C3DA /* GistDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB66E921989A5500B7C3DA /* GistDetails.swift */; };
+		CFAB66EC21989F3700B7C3DA /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB66EB21989F3700B7C3DA /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7294C8CB91FE37AB46697900 /* Pods-IbanWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IbanWallet/Pods-IbanWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		8D842B63399A3239DD59AB5D /* Pods-IbanWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbanWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-IbanWallet/Pods-IbanWallet.release.xcconfig"; sourceTree = "<group>"; };
+		97C491CE0AF88ABBAA2B2C1F /* Pods_IbanWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbanWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6C557721944A5F0035D6A7 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CF6C557921944A730035D6A7 /* Theme+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Splash.swift"; sourceTree = "<group>"; };
 		CF6C557B21944A820035D6A7 /* Theme+GistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+GistList.swift"; sourceTree = "<group>"; };
@@ -48,6 +55,9 @@
 		CF6DBBE621943FFD00CBA8B6 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		CF6DBBED2194414D00CBA8B6 /* GistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
 		CF6DBBEF219446F800CBA8B6 /* GistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListView.swift; sourceTree = "<group>"; };
+		CFAB66E72198966600B7C3DA /* GistOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistOwner.swift; sourceTree = "<group>"; };
+		CFAB66E921989A5500B7C3DA /* GistDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetails.swift; sourceTree = "<group>"; };
+		CFAB66EB21989F3700B7C3DA /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +65,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942D874EF94393D7843A9CE2 /* Pods_IbanWallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2706488C8F0CCE05A2C48C20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97C491CE0AF88ABBAA2B2C1F /* Pods_IbanWallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		910DB3859EAF8F937F73C732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7294C8CB91FE37AB46697900 /* Pods-IbanWallet.debug.xcconfig */,
+				8D842B63399A3239DD59AB5D /* Pods-IbanWallet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF6C557D21944A980035D6A7 /* GistDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +104,8 @@
 			children = (
 				CF6DBBC121943C0300CBA8B6 /* IbanWallet */,
 				CF6DBBC021943C0300CBA8B6 /* Products */,
+				910DB3859EAF8F937F73C732 /* Pods */,
+				2706488C8F0CCE05A2C48C20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				CF6DBBE621943FFD00CBA8B6 /* Gist.swift */,
+				CFAB66E72198966600B7C3DA /* GistOwner.swift */,
+				CFAB66E921989A5500B7C3DA /* GistDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -111,6 +143,7 @@
 		CF6DBBE92194402100CBA8B6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CFAB66EB21989F3700B7C3DA /* ServiceManager.swift */,
 				CF6DBBE221943D8600CBA8B6 /* NetworkManager.swift */,
 				CF6DBBE421943D9E00CBA8B6 /* PersistanceStorageManager.swift */,
 			);
@@ -166,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF6DBBD121943C0600CBA8B6 /* Build configuration list for PBXNativeTarget "IbanWallet" */;
 			buildPhases = (
+				4D83DCC0B9D0735B998F051D /* [CP] Check Pods Manifest.lock */,
 				CF6DBBBB21943C0300CBA8B6 /* Sources */,
 				CF6DBBBC21943C0300CBA8B6 /* Frameworks */,
 				CF6DBBBD21943C0300CBA8B6 /* Resources */,
+				16F0E893AFFF8730D482ED75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +259,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16F0E893AFFF8730D482ED75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IbanWallet/Pods-IbanWallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IbanWallet/Pods-IbanWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D83DCC0B9D0735B998F051D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IbanWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF6DBBBB21943C0300CBA8B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -235,6 +325,7 @@
 				CF6DBBDF21943D5900CBA8B6 /* GistSplashViewController.swift in Sources */,
 				CF6DBBDD21943D0500CBA8B6 /* GistListTableViewCell.swift in Sources */,
 				CF6DBBD921943CBC00CBA8B6 /* GistDetailView.swift in Sources */,
+				CFAB66E82198966600B7C3DA /* GistOwner.swift in Sources */,
 				CF6DBBEE2194414D00CBA8B6 /* GistListViewController.swift in Sources */,
 				CF6C557A21944A730035D6A7 /* Theme+Splash.swift in Sources */,
 				CF6DBBD721943CA400CBA8B6 /* GistDetailViewController.swift in Sources */,
@@ -245,6 +336,8 @@
 				CF6DBBE121943D6700CBA8B6 /* GistSplashView.swift in Sources */,
 				CF6DBBF0219446F800CBA8B6 /* GistListView.swift in Sources */,
 				CF6C557F21944AB10035D6A7 /* Theme+GistDetail.swift in Sources */,
+				CFAB66EA21989A5500B7C3DA /* GistDetails.swift in Sources */,
+				CFAB66EC21989F3700B7C3DA /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +390,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -320,6 +414,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -358,6 +453,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -374,15 +470,18 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		CF6DBBD221943C0600CBA8B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7294C8CB91FE37AB46697900 /* Pods-IbanWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = IbanWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,9 +496,11 @@
 		};
 		CF6DBBD321943C0600CBA8B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D842B63399A3239DD59AB5D /* Pods-IbanWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = IbanWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

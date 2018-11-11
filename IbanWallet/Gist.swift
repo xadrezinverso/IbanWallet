@@ -6,16 +6,28 @@
 //  Copyright © 2018 SBT. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+import ObjectMapper
 
-class Gist {
+class Gist: Object, Mappable {
     
-    let gistDescription: String
-    let imageUrlString: String
+    @objc dynamic var id: String = ""
+    @objc dynamic var owner: GistOwner?
+    @objc dynamic var gistDescription: String = ""
+    @objc dynamic var gistUrlString: String = ""
     
-    init(description: String, urlString: String) {
-        self.gistDescription = description
-        self.imageUrlString = urlString
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        gistUrlString <- map["url"]
+        gistDescription <- map["description"]
+        owner <- map["owner"]
+    }
 }

@@ -7,37 +7,49 @@
 //
 
 import UIKit
+import Cartography
 
 class GistListView: UIView {
     
-    public let gistCellIdentifier = "gistCell"
+    static let gistCellIdentifier = "gistCell"
     
-    private lazy var tableView: UITableView = {
-        let gistTableView = UITableView(frame: .zero, style: .plain)
-        gistTableView.backgroundColor = .clear
-        return gistTableView
+    private lazy var gistsTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = .blue
+        return tableView
     }()
     
     init(tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource) {
         super.init(frame: .zero)
-        tableView.delegate = tableViewDelegate
-        tableView.dataSource = tableViewDataSource
+        gistsTableView.delegate = tableViewDelegate
+        gistsTableView.dataSource = tableViewDataSource
+        setupView()
+        setupLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView() {
-        addSubview(tableView)
+    private func setupView() {
+        addSubview(gistsTableView)
         registerTableViewCells()
     }
     
-    func setupLayout() {
-        
+    private func setupLayout() {
+        constrain(gistsTableView) { view in
+            guard let superview = view.superview else {
+                return
+            }
+            view.edges == superview.edges
+        }
     }
     
     private func registerTableViewCells() {
-        tableView.register(GistListTableViewCell.self, forCellReuseIdentifier: gistCellIdentifier)
+        gistsTableView.register(GistListTableViewCell.self, forCellReuseIdentifier: GistListView.gistCellIdentifier)
+    }
+    
+    public func reloadTableViewData() {
+        gistsTableView.reloadData()
     }
 }
