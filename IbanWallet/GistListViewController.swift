@@ -16,7 +16,7 @@ class GistListViewController: UIViewController {
     
     private lazy var gistListView: GistListView = {
         let view = GistListView(tableViewDelegate: self, tableViewDataSource: self)
-        view.backgroundColor = .clear
+        view.backgroundColor = Theme.Default.GistList.gistViewBackgroundColor
         return view
     }()
     
@@ -45,8 +45,9 @@ class GistListViewController: UIViewController {
     
     private func setupView() {
         view.addSubview(gistListView)
-        view.backgroundColor = .yellow
-        registerListener()
+        view.backgroundColor = .clear
+        registerDatabaseUpdatesListener()
+        navigationItem.title = Strings.GistList.gistListTitle
     }
     
     private func setupLayout() {
@@ -58,7 +59,7 @@ class GistListViewController: UIViewController {
         }
     }
     
-    private func registerListener() {
+    private func registerDatabaseUpdatesListener() {
         notificationToken = serviceManager.gistsFromLocal()?.observe { (changes: RealmCollectionChange) in
             switch changes {
             case .initial, .update:
@@ -99,6 +100,7 @@ extension GistListViewController: UITableViewDataSource {
 extension GistListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let selectedGist = tableViewGists?[indexPath.row] else {
             return
         }

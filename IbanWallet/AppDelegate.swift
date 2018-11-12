@@ -22,9 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let window = window else {
             return false
         }
+        
         let shared = ServiceManager.instance
         shared.start()
-        window.rootViewController = GistListViewController(sharedServiceManager: shared)
+        let splashViewController = GistSplashViewController(shared: shared)
+        window.rootViewController = splashViewController
         window.makeKeyAndVisible()
 
         return true

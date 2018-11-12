@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Cartography
+import WebKit
 
 class GistDetailViewController: UIViewController {
     
-    private lazy var gistListView: GistDetailView = {
-        let view = GistDetailView(gist: self.gistDetails)
-        view.backgroundColor = .clear
+    private lazy var gistDetailView: GistDetailView = {
+        let view = GistDetailView(gist: self.gistDetails, webViewDelegate: self)
+        view.backgroundColor = Theme.Default.GistDetail.detailBackgroundColor
         return view
     }()
     
@@ -31,17 +33,35 @@ class GistDetailViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupLayout()
+        perform(#selector(loadContent), with: nil, afterDelay: Theme.Default.GistDetail.loadingAnimationDelay)
     }
     
     private func setupView() {
-        view.addSubview(gistListView)
-        //        view.backgroundColor = Theme.Default.More.About.backgroundColor
-        //        title = Strings.More.About.navBarTitle
-
+        view.addSubview(gistDetailView)
+        view.backgroundColor = .clear
+        navigationItem.title = self.gistDetails.owner?.username
     }
     
     private func setupLayout() {
-        
+        constrain(gistDetailView) { view in
+            guard let superview = view.superview else {
+                return
+            }
+            view.edges == superview.edges
+        }
     }
     
+    @objc private func loadContent() {
+        self.gistDetailView.loadGistContent()
+    }
+}
+
+extension GistDetailViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        gistDetailView.stopLoadingAnimation()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        gistDetailView.stopLoadingAnimation()
+    }
 }

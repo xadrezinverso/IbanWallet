@@ -7,8 +7,10 @@ target 'IbanWallet' do
 
   # Pods for IbanWallet
   pod 'Alamofire'
-#  pod 'RealmSwift'
+  pod 'RealmSwift'
   pod 'Cartography'
   pod 'ObjectMapper'
+  pod 'Kingfisher'
+  pod 'lottie-ios'
 
 end

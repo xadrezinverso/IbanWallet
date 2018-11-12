@@ -11,7 +11,7 @@ import Foundation
 struct Strings {
     
     struct GistList {
-        static let gistListTitle = NSLocalizedString("List", comment: "Title of gist list screen")
+        static let gistListTitle = NSLocalizedString("Gists List", comment: "Title of gist list screen")
 
     }
     

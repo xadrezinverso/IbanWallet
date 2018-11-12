@@ -24,14 +24,19 @@ class PersistanceStorageManager {
                 print("No items available")
                 return
             }
+            
             try database.write {
                 for item in items {
                     
                     guard let gist = Mapper<Gist>().map(JSON: item as! [String : Any]) else {
                         continue
                     }
-                    database.add(gist)
-                    print("Gist added to realm: \(gist.id)")
+                    if !gist.gistDescription.isEmpty {
+                        database.add(gist, update: true)
+                        print("Gist added to realm: \(gist.id)")
+                    } else {
+                        print("Gist with empty description not added to realm: \(gist.id)")
+                    }
                 }
             }
         } catch let error as NSError {

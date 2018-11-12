@@ -12,10 +12,11 @@ import ObjectMapper
 class Gist: Object, Mappable {
     
     @objc dynamic var id: String = ""
-    @objc dynamic var owner: GistOwner?
-    @objc dynamic var gistDescription: String = ""
     @objc dynamic var gistUrlString: String = ""
-    
+    @objc dynamic var gistDescription: String = ""
+    @objc dynamic var owner: GistOwner?
+    @objc dynamic var htmlUrlString: String = ""
+
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -29,5 +30,6 @@ class Gist: Object, Mappable {
         gistUrlString <- map["url"]
         gistDescription <- map["description"]
         owner <- map["owner"]
+        htmlUrlString <- map["html_url"]
     }
 }

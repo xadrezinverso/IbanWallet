@@ -10,9 +10,18 @@ import UIKit
 
 extension Theme.Default {
     struct GistList {
-        static let gistTableViewCellVerticalInset: CGFloat = 20.0
         
-        static let gistTableViewCellBackgroundColor: UIColor = .white
+        static let iconImageViewLeftOffset: CGFloat = 20.0
+        static let iconImageViewTopOffset: CGFloat = 30.0
+        static let iconImageViewSize: CGFloat = 40.0
+        
+        static let ownerLabelLeftOffset: CGFloat = 10.0
+        static let ownerLabelRightOffset: CGFloat = 20.0
+        
+        static let descriptionLabelVerticalInset: CGFloat = 20.0
+        static let descriptionLabelHorizontalInset: CGFloat = 20.0
+        
+        static let gistViewBackgroundColor: UIColor = .white
         static let gistTableViewCellTextColor: UIColor = .black
     }
 }

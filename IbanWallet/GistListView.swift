@@ -15,7 +15,7 @@ class GistListView: UIView {
     
     private lazy var gistsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.backgroundColor = .blue
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
