@@ -10,5 +10,9 @@ import UIKit
 
 extension Theme.Default {
     struct GistList {
+        static let gistTableViewCellVerticalInset: CGFloat = 20.0
+        
+        static let gistTableViewCellBackgroundColor: UIColor = .white
+        static let gistTableViewCellTextColor: UIColor = .black
     }
 }

@@ -14,7 +14,7 @@ class GistListTableViewCell: UITableViewCell {
     private lazy var gistDescriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .clear
-        label.textColor = .red
+        label.textColor = Theme.Default.GistList.gistTableViewCellTextColor
         return label
     }()
     
@@ -26,7 +26,7 @@ class GistListTableViewCell: UITableViewCell {
     
     public func setupView(info: Any) {
         backgroundColor = .clear
-        contentView.backgroundColor = .clear
+        contentView.backgroundColor = Theme.Default.GistList.gistTableViewCellBackgroundColor
         contentView.addSubview(gistDescriptionLabel)
     }
     
@@ -35,7 +35,7 @@ class GistListTableViewCell: UITableViewCell {
             guard let superview = view.superview else {
                 return
             }
-            view.edges == superview.edges
+            view.edges == superview.edges.inseted(vertically: Theme.Default.GistList.gistTableViewCellVerticalInset)
         }
     }
 }
